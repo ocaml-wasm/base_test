@@ -79,10 +79,16 @@ let%expect_test "find_exn" =
   in
   test_failure "zero";
   [%expect
-    {| (Not_found_s ("Map.find_exn: not found" zero lib/base/test/test_map.ml:LINE:COL)) |}];
+    {|
+    (Not_found_s (
+      "Map.find_exn: not found" zero lib/base_test/test/test_map.ml:LINE:COL))
+    |}];
   test_failure "four";
   [%expect
-    {| (Not_found_s ("Map.find_exn: not found" four lib/base/test/test_map.ml:LINE:COL)) |}]
+    {|
+    (Not_found_s (
+      "Map.find_exn: not found" four lib/base_test/test/test_map.ml:LINE:COL))
+    |}]
 ;;
 
 let%expect_test "[t_of_sexp] error on duplicate" =

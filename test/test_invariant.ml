@@ -7,7 +7,7 @@ let%expect_test "[invariant]" =
   [%expect
     {|
     ("invariant failed"
-     lib/base/test/test_invariant.ml:LINE:COL
+     lib/base_test/test/test_invariant.ml:LINE:COL
      (exn (Failure "deliberate error"))
      32)
     |}]
